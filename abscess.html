@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abscess - Pearl Dental Glossary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pearl-navy: #1e3a5f;
+            --pearl-light-blue: #4a90e2;
+            --pearl-accent: #6bb6ff;
+            --pearl-bg: #ffffff;
+            --pearl-gray-light: #f5f7fa;
+            --pearl-gray-medium: #e1e8ed;
+            --pearl-text: #2c3e50;
+            --pearl-text-light: #5a6c7d;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--pearl-text);
+            background-color: var(--pearl-bg);
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--pearl-navy) 0%, #2c5282 100%);
+            color: white;
+            padding: 2rem 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--pearl-navy);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .header-text p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Term Header */
+        .term-header {
+            background: var(--pearl-gray-light);
+            border-left: 5px solid var(--pearl-light-blue);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .term-title {
+            font-size: 2.5rem;
+            color: var(--pearl-navy);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .pronunciation {
+            font-size: 1.1rem;
+            color: var(--pearl-text-light);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .short-definition {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--pearl-text);
+            font-weight: 400;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border: 1px solid var(--pearl-gray-medium);
+            border-radius: 8px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--pearl-navy);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 1.4rem;
+            background: var(--pearl-light-blue);
+            border-radius: 2px;
+        }
+
+        .section-content {
+            color: var(--pearl-text);
+            line-height: 1.8;
+        }
+
+        /* Lists */
+        .content-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-list li {
+            padding: 0.6rem 0 0.6rem 1.75rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .content-list li::before {
+            content: "▸";
+            color: var(--pearl-light-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        /* Related Terms */
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .term-tag {
+            background: var(--pearl-gray-light);
+            color: var(--pearl-navy);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--pearl-gray-medium);
+        }
+
+        /* Alert Box */
+        .alert-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.25rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+
+        .alert-box strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-box p {
+            color: #856404;
+            margin: 0;
+        }
+
+        /* Emergency Alert */
+        .emergency-alert {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 1.25rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+
+        .emergency-alert strong {
+            color: #721c24;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .emergency-alert p {
+            color: #721c24;
+            margin: 0;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--pearl-gray-medium);
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--pearl-navy);
+            font-size: 1.05rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: var(--pearl-gray-light);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--pearl-light-blue);
+            transition: transform 0.3s;
+            user-select: none;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 0.5rem;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 1rem 0.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--pearl-text);
+            line-height: 1.7;
+        }
+
+        /* CDT Codes */
+        .cdt-code {
+            background: var(--pearl-gray-light);
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 0.5rem 0;
+            border-left: 3px solid var(--pearl-light-blue);
+        }
+
+        .cdt-code strong {
+            color: var(--pearl-navy);
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: var(--pearl-gray-light);
+            border: 1px solid var(--pearl-gray-medium);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: var(--pearl-text-light);
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            header {
+                background: var(--pearl-navy);
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .content-section {
+                break-inside: avoid;
+                box-shadow: none;
+            }
+
+            .faq-answer {
+                max-height: none !important;
+                display: block !important;
+            }
+
+            .faq-toggle {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .header-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .content-section {
+                padding: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .term-header {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .term-title {
+                font-size: 1.75rem;
+            }
+
+            .header-text h1 {
+                font-size: 1.25rem;
+            }
+
+            .logo-placeholder {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+
+            .related-terms {
+                gap: 0.4rem;
+            }
+
+            .term-tag {
+                font-size: 0.85rem;
+                padding: 0.35rem 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-placeholder">P</div>
+            <div class="header-text">
+                <h1>Pearl Dental Glossary</h1>
+                <p>Your comprehensive guide to dental terminology</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Term Header -->
+        <div class="term-header">
+            <h2 class="term-title">Abscess</h2>
+            <div class="pronunciation">AB-ses</div>
+            <p class="short-definition">A localized collection of pus caused by bacterial infection, occurring either at the tooth root tip (periapical) or in the gum tissue (periodontal), requiring prompt treatment to prevent spread.</p>
+        </div>
+
+        <!-- Expanded Definition -->
+        <section class="content-section">
+            <h3 class="section-title">What is an Abscess?</h3>
+            <div class="section-content">
+                <p>A dental abscess represents a bacterial infection that has formed a pocket of pus. Periapical abscesses originate from pulp necrosis, typically due to untreated decay or trauma. Periodontal abscesses arise from gum disease, often in deep periodontal pockets. Both types can cause significant pain and swelling, and may lead to serious complications if bacteria spread to surrounding tissues or enter the bloodstream. Abscesses do not resolve spontaneously and require professional treatment to eliminate the infection source.</p>
+            </div>
+        </section>
+
+        <!-- Clinical Significance -->
+        <section class="content-section">
+            <h3 class="section-title">Clinical Significance</h3>
+            <div class="section-content">
+                <p>Abscesses require urgent attention. Treatment focuses on eliminating the infection source, not just symptom management.</p>
+                <div class="alert-box">
+                    <strong>Important:</strong>
+                    <p>Dental abscesses are serious infections that require immediate professional treatment. Delaying care can lead to severe complications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Causes -->
+        <section class="content-section">
+            <h3 class="section-title">Common Causes</h3>
+            <div class="section-content">
+                <ul class="content-list">
+                    <li>Untreated dental caries leading to pulp death</li>
+                    <li>Periodontal disease with deep pockets</li>
+                    <li>Cracked or fractured teeth</li>
+                    <li>Failed root canal treatment</li>
+                    <li>Foreign body impaction</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Signs & Symptoms -->
+        <section class="content-section">
+            <h3 class="section-title">Signs & Symptoms</h3>
+            <div class="section-content">
+                <ul class="content-list">
+                    <li>Severe throbbing pain</li>
+                    <li>Swelling of face or gums</li>
+                    <li>Sensitivity to pressure and temperature</li>
+                    <li>Fever</li>
+                    <li>Bad taste from draining pus</li>
+                    <li>Difficulty swallowing or breathing in severe cases</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- How It's Detected -->
+        <section class="content-section">
+            <h3 class="section-title">How It's Detected</h3>
+            <div class="section-content">
+                <ul class="content-list">
+                    <li>Clinical examination revealing swelling and tenderness</li>
+                    <li>Periapical radiograph showing radiolucency</li>
+                    <li>Vitality testing of involved tooth</li>
+                    <li>Assessment of periodontal pockets</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Treatment Options -->
+        <section class="content-section">
+            <h3 class="section-title">Treatment Options</h3>
+            <div class="section-content">
+                <ul class="content-list">
+                    <li>Drainage of abscess</li>
+                    <li>Root canal treatment if tooth is restorable</li>
+                    <li>Extraction if tooth cannot be saved</li>
+                    <li>Antibiotics when infection is spreading</li>
+                    <li>Pain management</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Prevention -->
+        <section class="content-section">
+            <h3 class="section-title">Prevention</h3>
+            <div class="section-content">
+                <ul class="content-list">
+                    <li>Prompt treatment of cavities before pulp involvement</li>
+                    <li>Regular periodontal maintenance</li>
+                    <li>Protective mouthguards to prevent dental trauma</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- When to See a Dentist -->
+        <section class="content-section">
+            <h3 class="section-title">When to See a Dentist</h3>
+            <div class="section-content">
+                <div class="emergency-alert">
+                    <strong>Seek Immediate Care:</strong>
+                    <p>If experiencing facial swelling, fever, or difficulty swallowing. These may indicate spreading infection requiring urgent care.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section class="content-section">
+            <h3 class="section-title">Frequently Asked Questions</h3>
+            <div class="section-content">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can an abscess go away on its own?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. An abscess requires treatment to eliminate the infection source. Antibiotics alone do not resolve the underlying problem.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Should I go to the emergency room?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If experiencing difficulty breathing, swallowing, or high fever, seek emergency care immediately. Otherwise, contact your dentist urgently.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Will antibiotics cure my abscess?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Antibiotics help control spreading infection but do not cure an abscess. The infection source must be treated through drainage, root canal, or extraction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Terms -->
+        <section class="content-section">
+            <h3 class="section-title">Related Terms</h3>
+            <div class="section-content">
+                <div class="related-terms">
+                    <span class="term-tag">Infection</span>
+                    <span class="term-tag">Pulp Necrosis</span>
+                    <span class="term-tag">Periodontal Disease</span>
+                    <span class="term-tag">Drainage</span>
+                    <span class="term-tag">Swelling</span>
+                    <span class="term-tag">Fistula</span>
+                    <span class="term-tag">Root Canal</span>
+                    <span class="term-tag">Extraction</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CDT Codes -->
+        <section class="content-section">
+            <h3 class="section-title">CDT Codes</h3>
+            <div class="section-content">
+                <div class="cdt-code">
+                    <strong>D7510</strong> - Incision and drainage of abscess - intraoral soft tissue
+                </div>
+                <div class="cdt-code">
+                    <strong>D3310-D3330</strong> - Root canal treatment
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            This information is for educational purposes only and does not replace professional dental evaluation, diagnosis, or treatment.
+        </div>
+    </main>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+
+            document.querySelectorAll('.faq-toggle').forEach(item => {
+                if (item !== toggle) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
